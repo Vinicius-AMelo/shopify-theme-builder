@@ -1,0 +1,112 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring
+    | split: '"pageurl":"'
+    | last
+    | split: '"'
+    | first
+    | split: '.myshopify.com'
+    | last
+    | replace: '\/', '/'
+    | replace: '%20', ' '
+    | replace: '\u0026', '&'
+-%}
+{% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
+{% if finalurl contains '&sort_by' %}
+    {% assign noIndex = true %}
+{% elsif finalurl contains '?sort_by' %}
+    {% assign noIndex = true %}
+{% else %}
+    {% assign noIndex = false %}
+{% endif %}
+
+{% if template.name == 'product' and template.suffix == 'product-gift-free' %}
+    <meta name='robots' content='noindex, nofollow'>
+    <script>
+        var url_page_search = window.location.search;
+        if (url_page_search != '?v=product-view-temporary-direct') {
+            window.location.href = '/';
+        }
+    </script>
+{% endif %}
+
+{% if template.name == 'page' and template.suffix == 'formulario-canais-offline' %}
+    <meta name='robots' content='noindex, nofollow'>
+{% endif %}
+
+{% if template.name == 'product' and template.suffix == 'product-non-recharge' %}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% if template.name == 'index' %}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% if template.name == 'collection' %}
+    {% if collection.id != 269122764915
+        and collection.id != 261050335347
+        and collection.id != 261062787187
+        and collection.id != 280720605299
+        and collection.id != 280720572531
+        and collection.id != 280720539763
+        and noIndex == false
+    %}
+        <meta name='robots' content='index, follow'>
+    {% else %}
+        <meta name='robots' content='noindex, nofollow'>
+    {% endif %}
+{% endif %}
+
+{% if template.name == 'list-collections' %}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% if template.name == 'blog' %}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% if template.name == 'article' %}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% comment %} FOLLOW PAGES {% endcomment %}
+{% if page.id == 79679946867
+    or page.id == 47467954291
+    or page.id == 47330918515
+    or page.id == 29109387362
+    or page.id == 29109223522
+    or page.id == 79593734259
+    or page.id == 80140828787
+    or page.id == 80196534387
+    or page.id == 87573758067
+    or page.id == 80800678003
+    or page.id == 50921472115
+    or page.id == 87304962163
+    or page.id == 79842607219
+%}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% comment %} NO FOLLOW PAGES {% endcomment %}
+{% if page.id == 7062030680179
+    or page.id == 84924530803
+    or page.id == 83944177779
+    or page.id == 85506064499
+    or collection.id == 261062787187
+    or collection.id == 261050335347
+    or collection.id == 269122764915
+%}
+    <meta name='robots' content='noindex, nofollow'>
+{% endif %}
+
+{% if template.suffix == 'landing-page-porto-plus'
+    or template.suffix == 'landing-page-itau'
+    or template.suffix == 'landing-page-cartao-porto-bank'
+    or template.suffix == 'landing-page-minis'
+    or template.suffix == 'landing-page-livelo'
+%}
+    <meta name='robots' content='index, follow'>
+{% endif %}
+
+{% if template.name == 'login' %}
+    <meta name='robots' content='noindex, nofollow'>
+{% endif %}

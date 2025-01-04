@@ -1,0 +1,233 @@
+{% if customer %}
+    {%- comment -%} ///////// DATA DE NASCIMENTO ///////// {%- endcomment -%}
+    {%- comment -%} busca campo de data de nascimento do perfil do cliente {%- endcomment -%}
+    {% assign customerDatadeNascimento = customer.metafields.custom.data_de_nascimento %}
+    {%- comment -%} ///////// END DATA DE NASCIMENTO ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 001 CHURN ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_001 = customer.metafields.custom.brinde_on_off_001 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_001 = customer.metafields.custom.brinde_resgatado_001 %}
+    {%- comment -%} ///////// END BRINDE 001 CHURN ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 002 NEW CLIENTS ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_002 = customer.metafields.custom.brinde_on_off_002 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_002 = customer.metafields.custom.brinde_resgatado_002 %}
+    {%- comment -%} ///////// END BRINDE 002 NEW CLIENTS ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 003 TOP 20% CLIENTS ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_003 = customer.metafields.custom.brinde_on_off_003 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_003 = customer.metafields.custom.brinde_resgatado_003 %}
+    {%- comment -%} ///////// END BRINDE 003 TOP 20% CLIENTS ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 004 VIP CLIENTS ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_004 = customer.metafields.custom.brinde_on_off_004 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_004 = customer.metafields.custom.brinde_resgatado_004 %}
+    {%- comment -%} ///////// END BRINDE 004 VIP CLIENTS ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 005 BASE ONDAS ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_005 = customer.metafields.custom.brinde_on_off_005 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_005 = customer.metafields.custom.brinde_resgatado_005 %}
+    {%- comment -%} ///////// END BRINDE 005 BASE ONDAS ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 006 REFIL ESCOVA ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_006 = customer.metafields.custom.brinde_on_off_006 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_006 = customer.metafields.custom.brinde_resgatado_006 %}
+    {%- comment -%} ///////// END BRINDE 006 REFIL ESCOVA ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 007 KIT BASE DONUTS ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_007 = customer.metafields.custom.brinde_on_off_007 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_007 = customer.metafields.custom.brinde_resgatado_007 %}
+    {%- comment -%} ///////// END BRINDE 007 KIT BASE DONUTS ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 008 SHAMPOO PURIFICANTE POCKET ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_008 = customer.metafields.custom.brinde_on_off_008 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_008 = customer.metafields.custom.brinde_resgatado_008 %}
+    {%- comment -%} ///////// END BRINDE 008 SHAMPOO PURIFICANTE POCKET ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 009 DUPLA LATINHA VERDE E TERRACOTA ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_009 = customer.metafields.custom.brinde_on_off_009 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_009 = customer.metafields.custom.brinde_resgatado_009 %}
+    {%- comment -%} ///////// END BRINDE 009 DUPLA LATINHA VERDE E TERRACOTA ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 010 KIT TABS COM FLUOR ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_010 = customer.metafields.custom.brinde_on_off_010 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_010 = customer.metafields.custom.brinde_resgatado_010 %}
+    {%- comment -%} ///////// END BRINDE 010 KIT TABS COM FLUOR ///////// {%- endcomment -%}
+
+    {%- comment -%} ///////// BRINDE 011 BASE ELIPTICA VERDE ///////// {%- endcomment -%}
+    {%- comment -%}  ligar ou desligar o brinde no perfil do cliente {%- endcomment -%}
+    {% assign brindeProfileOnOff_011 = customer.metafields.custom.brinde_on_off_011 %}
+    {%- comment -%} verificar se no perfil do cliente o brinde foi resgatado {%- endcomment -%}
+    {% assign brindeSkuResgatado_011 = customer.metafields.custom.brinde_resgatado_011 %}
+    {%- comment -%} ///////// END BRINDE 011 BASE ELIPTICA VERDE ///////// {%- endcomment -%}
+{%- endif -%}
+
+{% if section.settings.show_announcement_bar %}
+    {% unless template.suffix == 'home-assinatura' or section.settings.show_announcement_bar_only_homepage and template != 'index' %}
+        <div class='e-announcement-bar'>
+            <div class='e-announcement-bar__list'>
+                {% comment %}
+                    //
+                        se usuario estiver logado vamos validar se ele tem brinde
+                        para ser resgatado
+                    //
+                {% endcomment %}
+                {% if customer %}
+                    {% comment %}
+                        //
+                            se o usuario estiver com brindeSkuResgatado_00X (false) quer dizer que irá
+                            aparecer a mensagem pra ele que ele tem brinde disponivel para resgate
+                        //
+                    {% endcomment %}
+                    {% if brindeSkuResgatado_001 == false
+                        or brindeSkuResgatado_002 == false
+                        or brindeSkuResgatado_003 == false
+                        or brindeSkuResgatado_004 == false
+                        or brindeSkuResgatado_005 == false
+                        or brindeSkuResgatado_006 == false
+                        or brindeSkuResgatado_007 == false
+                        or brindeSkuResgatado_008 == false
+                        or brindeSkuResgatado_009 == false
+                        or brindeSkuResgatado_010 == false
+                        or brindeSkuResgatado_011 == false
+                    %}
+                        <span class='e-announcement-bar__list--item'>
+                            <span>
+                                🎁 você tem 1 brinde. <a href='/account?view=your-gifts' style='margin: 0 3px;text-decoration: underline;'> clique aqui </a> pra
+                                resgatar!
+                            </span>
+                        </span>
+                    {%- endif -%}
+                {%- endif -%}
+
+                {% comment %}
+                    //
+                        se tiver logado, vamos validar se tem data de nascimento(aniversario)
+                        preenchido, se não tiver, mostra um annoucement bar pedindo pra preencher
+                    //
+                {% endcomment %}
+                {% if customer %}
+                    {% if customerDatadeNascimento == blank %}
+                        <span class='e-announcement-bar__list--item'>
+                            {% comment %}
+                                <span>
+                                    📝 mantenha sua conta atualizada <a href='/account?view=customer-data' style='margin: 0 3px;text-decoration: underline;'> aqui </a>
+                                </span>
+                            {% endcomment %}
+
+                            <span>
+                                🎉
+                                <a href='/pages/birthday?email_customer={{ customer.email }}'
+                                    >deixe seu aniversário <span style='text-decoration: underline;'>aqui</span> para receber novidades</a
+                                >
+                            </span>
+                        </span>
+                    {%- endif -%}
+                {%- endif -%}
+
+                {%- for block in section.blocks -%}
+                    {%- if block.type == 'announcement_copy_text' -%}
+                        <span class='e-announcement-bar__list--item e-copy-text' data-cupom='{{ block.settings['announcement_bar-copy_text'] }}'>
+                            <span>
+                                <p class='e-item-text'>{{ block.settings['announcement_bar-text'] }}</p>
+                            </span>
+                        </span>
+                    {%- endif -%}
+
+                    {%- if block.type == 'announcement_link' -%}
+                        <span class='e-announcement-bar__list--item'>
+                            <span>
+                                {%- if block.settings['announcement_bar-link'] -%}
+                                    <a href='{{ block.settings.announcement_bar-link }}' data='{{ block.settings.announcement_bar-attribute }}'>
+                                        {{- block.settings['announcement_bar-text'] -}}
+                                    </a>
+                                {%- else -%}
+                                    <p>{{- block.settings['announcement_bar-text'] -}}</p>
+                                {%- endif -%}
+                            </span>
+                        </span>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    {% endunless %}
+{% endif %}
+
+{%- schema -%}
+    {
+        "name": "Announcement Bar",
+        "tag": "section",
+        "class": "e-announcement-bar-section",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "show_announcement_bar",
+                "label": "Ativar Announcement Bar"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_announcement_bar_only_homepage",
+                "label": "Mostrar Somente na Homepage"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Texto Copiável",
+                "type": "announcement_copy_text",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "announcement_bar-text",
+                        "label": "Texto principal do announcement bar"
+                    },
+                    {
+                        "type": "text",
+                        "id": "announcement_bar-copy_text",
+                        "label": "Texto a ser copiado"
+                    }
+                ]
+            },
+            {
+                "name": "Link de Redirecionamento",
+                "type": "announcement_link",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "announcement_bar-text",
+                        "label": "Texto principal do announcement bar"
+                    },
+                    {
+                        "type": "url",
+                        "id": "announcement_bar-link",
+                        "label": "Link de Redirecionamento"
+                    },
+                    {
+                        "type": "text",
+                        "id": "announcement_bar-attribute",
+                        "label": "Atributo do Link"
+                    }
+                ]
+            }
+        ]
+    }
+{%- endschema -%}

@@ -1,0 +1,10 @@
+@use "general/exports" as *;
+@use 'partials/slick';
+@use 'partials/header';
+@use 'partials/footer';
+
+
+.cbb-frequently-bought-container {
+    display: none;
+    background-color: $color-branco;
+}

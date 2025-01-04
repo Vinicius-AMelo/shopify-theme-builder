@@ -1,0 +1,28 @@
+{% capture finalurl %}
+    {% render 'head__actual-url' %}
+{% endcapture %}
+
+{% if finalurl contains '&sort_by' %}
+    {% assign collection_canonical = finalurl | split: '&sort_by' | first %}
+{% elsif finalurl contains '?sort_by' %}
+    {% assign collection_canonical = finalurl | split: '?sort_by' | first %}
+{% else %}
+    {% assign collection_canonical = finalurl %}
+{% endif %}
+
+{% for tag in collection.tags %}
+    {% if request.path contains tag %}
+        {% assign ulr_tag = '/' | append: tag %}
+        {% assign collection_canonical = collection_canonical | remove: ulr_tag %}
+    {% endif %}
+{% endfor %}
+
+{% comment %}
+    {% if template.name == 'collection' %}
+    <link rel='canonical' href='{{ collection_canonical }}'>
+    {% else %}
+    <link rel='canonical' href='{{ canonical_url }}'>
+    {% endif %}
+{% endcomment %}
+
+<link rel='canonical' href='{{ canonical_url }}'>

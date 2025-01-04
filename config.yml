@@ -1,0 +1,5 @@
+development:
+    password: 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
+    theme_id: 133238521971
+    store: rawpack-bars.myshopify.com
+    directory: './build'

@@ -1,0 +1,9 @@
+<script src='{{ 'lazyload.min.js' | asset_url }}' defer></script>
+<script src='{{ 'store-general.js' | asset_url }}' defer></script>
+<script src='{{ 'jquery.mask.js' | asset_url }}' async></script>
+
+{% comment %}
+    {% if template.name == 'index' %}
+        <script src='{{ 'store-home.js' | asset_url }}' async></script>
+    {% endif %}
+{% endcomment %}

@@ -1,0 +1,40 @@
+[
+    {
+        "name": "theme_info",
+        "theme_name": "Custom Theme",
+        "theme_author": "Vinícius Melo",
+        "theme_version": "1.0.0",
+        "theme_documentation_url": "https://bitbucket.org/robsonss/b.o.b-store-b2c-brasil-2023",
+        "theme_support_email": "vinicius.apol.melo@gmail.com"
+    },
+    {
+        "name": "General",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Favicon"
+            },
+            {
+                "type": "image_picker",
+                "id": "favicon",
+                "label": "Imagem do Favicon",
+                "info": "Será redimensionado para 32 x 32px"
+            },
+            {
+                "type": "header",
+                "content": "Ferramentas Externas"
+            },
+            {
+                "type": "checkbox",
+                "id": "ab_activate",
+                "label": "Ativar Ferramenta",
+                "info": "Ferramenta de teste A/B Optimzely, VWO, etc."
+            },
+            {
+                "type": "html",
+                "id": "ab_html_code",
+                "label": "Código da Ferramenta de Teste A/B"
+            }
+        ]
+    }
+]
