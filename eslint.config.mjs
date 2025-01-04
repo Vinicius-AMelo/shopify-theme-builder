@@ -18,7 +18,7 @@ const config = [
                 ...globals.node,
                 ...globals.jquery,
                 LazyLoad: 'readonly',
-                BOB_General: 'readonly',
+                ModifyCustomStore_General: 'readonly',
                 Shopify: 'readonly',
                 ReleasesPage: 'readonly',
             },

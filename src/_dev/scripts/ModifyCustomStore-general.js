@@ -1,4 +1,4 @@
-const Store_General = {
+const ModifyCustomStore_General = {
     data: {},
 
     methods: {
@@ -17,10 +17,10 @@ const Store_General = {
 };
 
 jQuery(() => {
-    Store_General.mounted();
+    ModifyCustomStore_General.mounted();
 });
 
-window.Store_General = Store_General;
+window.ModifyCustomStore_General = ModifyCustomStore_General;
 
 window.lazyFunctions = {
     lazyScripts() {
